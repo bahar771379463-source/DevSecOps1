@@ -2,9 +2,9 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "No dependencies yet"
 
-       - name: Run security scan (Bandit)
+      - name: Run security scan (Bandit)
         run: |
           pip install bandit
           bandit -r .
