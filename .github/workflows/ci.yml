@@ -22,6 +22,11 @@ jobs:
         run: |
           echo "No dependencies yet"
 
+       - name: Run security scan (Bandit)
+        run: |
+          pip install bandit
+          bandit -r .
+
       - name: Run app
         run: |
           python app.py
